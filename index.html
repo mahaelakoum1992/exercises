@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج طلب المستلزمات المدرسية</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #008080; /* Teal blue background */
+            color: #fff; /* White text for contrast */
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #006666; /* Darker teal for contrast */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 5px #00cccc;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item label {
+            display: inline-block;
+            width: 60%;
+        }
+
+        .item input[type="number"] {
+            width: 35%;
+            display: inline-block;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            background-color: #00b3b3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #009999;
+        }
+
+        .summary-container {
+            text-align: center;
+            padding: 20px;
+            background: #004d4d;
+            border-radius: 10px;
+            margin-top: 30px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>نموذج طلب المستلزمات المدرسية - العام الدراسي 2024/2025</h1>
+
+        <form class="contact-form">
+            <div class="form-section">
+                <label for="student-name">اسم الطالب:</label>
+                <input type="text" id="student-name" name="student-name" required>
+
+                <label for="class">الصف:</label>
+                <input type="text" id="class" name="class" required>
+            </div>
+
+            <div class="form-section">
+                <h2>قائمة المستلزمات:</h2>
+
+                <div class="item">
+                    <label for="notebooks">دفاتر عدد:</label>
+                    <input type="number" id="notebooks" name="notebooks" min="0">
+                </div>
+
+                <div class="item">
+                    <label for="pens">أقلام عدد:</label>
+                    <input type="number" id="pens" name="pens" min="0">
+                </div>
+
+                <div class="item">
+                    <label for="pencils">أقلام رصاص عدد:</label>
+                    <input type="number" id="pencils" name="pencils" min="0">
+                </div>
+
+                <div class="item">
+                    <label for="erasers">مماحات عدد:</label>
+                    <input type="number" id="erasers" name="erasers" min="0">
+                </div>
+
+                <div class="item">
+                    <label for="rulers">مساطر عدد:</label>
+                    <input type="number" id="rulers" name="rulers" min="0">
+                </div>
+
+                <div class="item">
+                    <label for="colors">علب ألوان عدد:</label>
+                    <input type="number" id="colors" name="colors" min="0">
+                </div>
+
+                <div class="item">
+                    <label for="backpacks">حقائب عدد:</label>
+                    <input type="number" id="backpacks" name="backpacks" min="0">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label for="notes">ملاحظات إضافية:</label>
+                <textarea id="notes" name="notes" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">إرسال الطلب</button>
+        </form>
+
+        <div class="summary-container">
+            <p>شكرًا لتعبئة النموذج. سيتم مراجعة طلبك في أقرب وقت.</p>
+        </div>
+    </div>
+</body>
+</html>
